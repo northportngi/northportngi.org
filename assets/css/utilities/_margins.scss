@@ -1,0 +1,12 @@
+@for $i from 0 to 20 {
+	.m-#{$i} { margin: #{$i*.5}rem; }
+	.mt-#{$i} { margin-top: #{$i*.5}rem; }
+	.mb-#{$i} { margin-bottom: #{$i*.5}rem; }
+	.ml-#{$i} { margin-left: #{$i*.5}rem; }
+	.mr-#{$i} { margin-right: #{$i*.5}rem; }
+	.mblock-#{$i} { margin-block: #{$i*.5}rem; }
+	.minline-#{$i} { margin-inline: #{$i*.5}rem; }
+}
+.minline-auto {
+	margin-inline: auto;
+}

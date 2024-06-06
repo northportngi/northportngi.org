@@ -1,0 +1,12 @@
+@for $i from 0 to 21 {
+	.p-#{$i} { padding: #{$i*.5}rem; }
+	.pt-#{$i} { padding-top: #{$i*.5}rem; }
+	.pb-#{$i} { padding-bottom: #{$i*.5}rem; }
+	.pl-#{$i} { padding-left: #{$i*.5}rem; }
+	.pr-#{$i} { padding-right: #{$i*.5}rem; }
+	.pblock-#{$i} { padding-block: #{$i*.5}rem; }
+	.pinline-#{$i} { padding-inline: #{$i*.5}rem; }
+}
+.pinline-auto {
+	padding-inline: auto;
+}

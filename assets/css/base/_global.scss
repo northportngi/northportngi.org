@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: var(--lavender);
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+main {
+	background-color: var(--white);
+}
+img {
+	display: block;
+	width: 100%;
+}
+a,
+button {
+	cursor: pointer !important;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+	white-space: nowrap;
+}
+.nowrap {
+	white-space: nowrap;
+}
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 20px;
+	&--800 {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	&--900 {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	&--1000 {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	&--1100 {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	&--1200 {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	&--1300 {
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+	&--1400 {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+}
+.hidden {
+	visibility: hidden;
+}
+
+a.skip-main {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+}
+a.skip-main:active,
+a.skip-main:focus {
+	color: var(--dark-blue);
+	background-color: var(--mint);
+	left: auto;
+	top: auto;
+	width: auto;
+	height: auto;
+	overflow: auto;
+	padding: 0.5em 1em;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: 600;
+	z-index: 999999;
+}
+hr {
+	border: none;
+	height: 1px;
+	/* Set the hr color */
+	color: var(--medium-gray); /* old IE */
+	background-color: var(--medium-gray); /* Modern Browsers */
+}

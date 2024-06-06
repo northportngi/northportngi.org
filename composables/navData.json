@@ -1,0 +1,32 @@
+{
+    "primary": [
+        {
+            "label": "About",
+            "path": "/about"
+        },
+        {
+            "label": "Get Involved",
+            "path": "/get-involved"
+        },
+        {
+            "label": "Education & Projects",
+            "path": "/education-and-projetcs"
+        },
+        {
+            "label": "News & Events",
+            "path": "/news-and-events"
+        },
+        {
+            "label": "Shop",
+            "path": "#"
+        },
+        {
+            "label": "Donate",
+            "path": "#"
+        },
+        {
+            "label": "Contact",
+            "path": "#"
+        }
+    ]
+}

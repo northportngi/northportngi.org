@@ -1,0 +1,17 @@
+$colors: 'white', 'black', 'super-light-gray', 'light-gray', 'medium-gray', 'dark-gray', 'green', 'light-green', 'dark-green', 'light-pink', 'pink', 'cream', 'lavender', 'light-lavender', 'yellow', 'purple', 'red';
+@each $color in $colors {
+	.clr-#{$color} {
+		color: var(--#{$color});
+	}
+	.clr-bg-#{$color} {
+		background-color: var(--#{$color});
+	}
+}
+.lavendar-bg-pattern {
+	background: var(--light-lavender) url('/images/flower-pattern-lavendar.png') repeat center center;
+	background-size: 800px;
+}
+.green-bg-pattern {
+	background: var(--green) url('/images/flower-pattern-dark-green.png') repeat center center;
+	background-size: 800px;
+}
