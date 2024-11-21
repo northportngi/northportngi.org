@@ -1,6 +1,6 @@
 ---
-title: 'Mosquito Buckets'
-date: 2024-06-05
+title: Mosquito Buckets
+date: 2024-06-05T00:00:00.000Z
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
 ---
 
@@ -25,7 +25,6 @@ Mosquito buckets are an extremely effective way to rid your property of mosquito
 ## Maintenance:
 
 1. After a heavy rain, you will want to pour out some of the extra liquid. Some people drill holes in the top third of the bucket so that this happens automatically.
-
 2. Once a month (June, July, August, September), empty your bucket of water, retaining the plant material. Fill it up again with water and add another ½ of a dunk.
 
 ## Q & A
