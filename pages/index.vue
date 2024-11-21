@@ -1,10 +1,3 @@
-<script setup>
-	const { data: entry } = await useAsyncData('home', () => queryContent('/home').findOne())
-	const banner = entry.value.banner
-	const why = entry.value.why
-	const services = entry.value.services
-	const pledge = entry.value.pledge
-</script>
 <template>
 	<main>
 		<!-- BANNER -->
@@ -13,17 +6,17 @@
 				<div class="container">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1.5fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow"><img src="/images/bee.svg" alt="" class="banner__bee" />{{ banner.header }}</h1>
-							<p class="fs-500" v-html="banner.intro" />
+							<h1 class="banner__header fs-xl regular clr-yellow"><img src="/images/bee.svg" alt="" class="banner__bee" />Hello and welcome to the Northport Native Garden Initiative (NNGI)!</h1>
+							<p class="fs-500">We are a non-profit (501(c)(3)) located in Northport, New York. Our aim is to educate people about how fun and easy it is to achieve the goals of a beautifully maintained landscape while implementing helpful ecological practices. <strong class="clr-pink">We do this through the following:</strong></p>
 							<ul>
-								<li v-for="item in banner.list">
-									{{ item }}
-								</li>
+								<li>Educational programs</li>
+								<li>Plant Sale Events</li>
+								<li>Social media discussion groups and Education (Facebook/Instagram)</li>
 							</ul>
 						</template>
 
 						<template #rightColumn>
-							<img :src="banner.illustration" :alt="banner.illustration_alt" />
+							<img src="/images/nngi-illustration.webp" alt="Illustration of native flowers" />
 						</template>
 					</SplitContent>
 				</div>
@@ -35,19 +28,11 @@
 			<div class="container container--1200">
 				<SplitContent gridColumns="1.5fr 3fr" alignItems="center">
 					<template #leftColumn>
-						<!-- <div class="image-sillos">
-							<div class="image-sillos__image-1">
-								<img :src="why.image1" :alt="why.image1_alt" />
-							</div>
-							<div class="image-sillos__image-2">
-								<img :src="why.image2" :alt="why.image2_alt" />
-							</div>
-						</div> -->
-						<img src="/images/yellow-flowers.png" alt="" />
+						<img src="/images/yellow-flowers.png" alt="Illustration of yellow native flowers" />
 					</template>
 					<template #rightColumn>
-						<h2 class="fs-900 fw-600 regular clr-purple">{{ why.header }}</h2>
-						<p>{{ why.copy }}</p>
+						<h2 class="fs-900 fw-600 regular clr-purple">Why Garden with Native Plants & Flowers?</h2>
+						<p>Native plants are essential to supporting living landscapes across the United States. The term "native" means that these plant species are naturally occurring and actively support the biodiversity within a particular region. In addition to providing nourishment and habitat, native plants play a vital role in stormwater management by filtering nitrates before they run into our waterways.</p>
 					</template>
 				</SplitContent>
 			</div>
@@ -56,43 +41,51 @@
 		<!-- SERVICES -->
 		<section class="pblock-6 clr-bg-light-lavender">
 			<div class="container container--1200">
-				<!-- <h2 class="fs-900 fw-600 regular clr-purple">{{ services.header }}</h2> -->
-				<!-- <div class="services">
-					<div v-for="service in services.list">
-						{{ service }}
-					</div>
-				</div> -->
-				<!-- <p class="bold">{{ services.copy }}</p> -->
 				<SplitContent gridColumns="3fr 1.25fr" alignItems="center" gridGap="8rem">
 					<template #leftColumn>
-						<h2 class="fs-900 fw-600 regular clr-purple">{{ services.header }}</h2>
+						<h2 class="fs-900 fw-600 regular clr-purple">Services</h2>
 						<ul class="services">
-							<li v-for="service in services.list">
-								{{ service }}
-							</li>
+							<li>Consultation and Garden Design</li>
+							<li>Speaking Engagements and Lectures</li>
+							<li>Scout Project Facilitation</li>
+							<li>Restoration and Invasive Species Guidance</li>
+							<li>Rain Garden Implementation Program</li>
+							<li>PTA and School Fundraiser Program</li>
 						</ul>
 					</template>
 					<template #rightColumn>
 						<img src="/images/bee-house.webp" alt="Illustration of a bee house" class="bee-house" />
 					</template>
 				</SplitContent>
-				<p class="contact bold text-center mt-8">{{ services.copy }}</p>
+				<p class="contact bold text-center mt-8">For more information or questions about these services please email us at: northportngi@gmail.com</p>
 			</div>
 		</section>
 
 		<!-- PLEDGE -->
 		<section class="pblock-12 clr-bg-green clr-cream text-center green-bg-pattern">
 			<div class="container container--1200">
-				<h2 class="clr-light-lavender script mb-1">{{ pledge.header }}</h2>
-				<p class="fs-600 mb-1 mb-2">{{ pledge.copy }}</p>
+				<h2 class="clr-light-lavender script mb-1">Do Your Part</h2>
+				<p class="fs-600 mb-1 mb-2">A simple choice to help our environment by landscaping with native plants.</p>
 			</div>
 		</section>
 
 		<!-- COUNTERS -->
 		<div class="container container--1200 pb-12">
 			<div class="counters">
-				<div v-for="stat in pledge.stats">
-					<Counter :targetCount="stat.targetCount" :duration="1000" :text="stat.text" :plusSign="stat.plusSign" />
+				<div>
+					<Counter :targetCount="15" :duration="1000" text="Pledge Takers" :plusSign="false" />
+				</div>
+				<div>
+					<Counter :targetCount="300" :duration="1000" text="Native Plants Added" :plusSign="true" />
+				</div>
+				<div>
+					<Counter :targetCount="22" :duration="1000" text="Rain Gardens Added" :plusSign="false" />
+				</div>
+				<div>
+					<Counter :targetCount="30" :duration="1000" text="Chemical Free Yards" :plusSign="false" />
+				</div>
+				<div>
+					<Counter :targetCount="10" :duration="1000" text="Mason Bee Houses Added" :plusSign="false" />
 				</div>
 			</div>
 		</div>

@@ -32,8 +32,9 @@
 		},
 		{
 			"label": "Donate",
-			"path": "/donate",
-			"slug": "donate"
+			"path": "https://square.link/u/3tqRHobW",
+			"slug": "donate",
+			"external": true
 		}
 	]
 }

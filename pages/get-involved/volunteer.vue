@@ -8,10 +8,10 @@
 		<div class="banner green-bg-pattern clr-cream">
 			<div class="pblock-8">
 				<div class="container container--1400">
-					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
+					<SplitContent gridGap="8rem" gridColumns="4fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2" v-html="entry.header" />
-							<p>{{ entry.banner_copy }}</p>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Volunteer</h1>
+							<p class="fs-500">We love the energy of our community and we thrive on volunteers to move forward with our mission.</p>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -21,7 +21,17 @@
 		<main>
 			<div class="container container--1400">
 				<div class="mblock-8">
-					<p class="bold">Please use the form below to let us know how you would like to get involved with NNGI.</p>
+					<SplitContent gridGap="8rem" gridColumns="1fr 500px ">
+						<template #leftColumn>
+							<p><strong>Plant sale volunteers can take on one shift or multiple shifts.</strong> <br />Our volunteers will help with sorting plants for orders, organizing orders and helping with pick-up. Thank you for your help!</p>
+							<Button label="Liability Waiver" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
+							<hr class="mblock-6" />
+							<WufooForm formid="m7ou7d50ewqn6t" />
+						</template>
+						<template #rightColumn>
+							<img src="/images/nngi-illustration.webp" alt="Illustration of native flowers" />
+						</template>
+					</SplitContent>
 				</div>
 			</div>
 		</main>
