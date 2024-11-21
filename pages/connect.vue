@@ -7,6 +7,9 @@
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
 							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Please Get In Touch</h1>
+							<p class="fs-500 bold">Have a question about Native Plants or Gardens?</p>
+							<p class="fs-500 bold">Interested in one of our lectures?</p>
+							<p class="fs-500 bold">Have a project that you would like us to consult on?</p>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -16,16 +19,13 @@
 		<main>
 			<div class="container container--1400">
 				<div class="mblock-8">
-					<SplitContent gridGap="8rem" gridColumns="500px 1fr">
+					<SplitContent gridGap="8rem" gridColumns="1fr 500px">
 						<template #leftColumn>
-							<img src="/images/nngi-illustration.webp" alt="Illustration of native flowers" />
-						</template>
-						<template #rightColumn>
-							<p class="fs-600 bold clr-purple">Have a question about Native Plants or Gardens?</p>
-							<p class="fs-600 bold clr-purple">Interested in one of our lectures?</p>
-							<p class="fs-600 bold clr-purple">Have a project that you would like us to consult on?</p>
 							<p class="fs-600 bold clr-purple">Please get in touch with us by using the contact form below.</p>
 							<WufooForm formid="zsyk5p41c95wcl" />
+						</template>
+						<template #rightColumn>
+							<img src="/images/nngi-illustration.webp" alt="Illustration of native flowers" />
 						</template>
 					</SplitContent>
 				</div>
