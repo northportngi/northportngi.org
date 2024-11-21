@@ -12,7 +12,7 @@
     "@nuxt/content": "^2.12.1",
     "@nuxt/fonts": "^0.7.0",
     "@nuxtjs/seo": "^2.0.0-rc.10",
-    "nuxt": "^3.11.2"
+    "nuxt": "^3.12.4"
   },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.15",

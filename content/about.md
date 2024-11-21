@@ -1,13 +1,8 @@
 ---
-title: About Northport Native Garden Initiative
+title: About Northport Native Garden&nbsp;Initiative
 mission:
     title: 'Our Mission Statement'
     statement: The mission and charitable purpose of the Northport Native Garden Initiative Inc. is to provide individuals, organizations, and municipalities within the Northport-East Northport and surrounding communities with the knowledge to implement ecological practices to benefit the local ecosystem and to provide resources, support, and tools to empower individuals and entities to contribute to the health of the local environment.
-sponsors:
-    title: 'Sponsors'
-    header: 'Thank you to our Sponsors and Partners'
-    sub_header: 'Northport Native Garden Initiative is made stronger with the help of our sponsors.'
-    sponsors: [Northwestern Mutual, Square Foot Gardening, Friends of Mercy Smith, Rotary Club of Northport, Long Island Native Plant Initiative (LINPI), Village of Northport, Northport-East Northport School District, Cornell Cooperative Extension of Suffolk County - Sea Stars, Sara Mairead Landscape Design, Tyska Native Plants & Consulting, Prints Charming Graphics]
 who_we_are:
     title: Who We Are
     members:

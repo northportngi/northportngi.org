@@ -2,6 +2,7 @@
 banner:
     header: 'Hello and welcome to the Northport Native Garden Initiative (NNGI)!'
     intro: 'We are a non-profit (501(c)(3)) located in Northport, New York. Our aim is to educate people about how fun and easy it is to achieve the goals of a beautifully maintained landscape while implementing helpful ecological practices. <strong class="clr-pink">We do this through the following:</strong>'
+    list: [Educational programs, Plant Sale Events, Social media discussion groups and Education (Facebook/Instagram)]
     illustration: '/images/nngi-illustration.webp'
     illustration_alt: 'Illustration of native flowers'
 why:

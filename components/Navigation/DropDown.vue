@@ -39,7 +39,7 @@
 	.dropdown-toggle {
 		display: block;
 		background-color: transparent;
-		min-height: 65px;
+		min-height: 50px;
 		border: none;
 		cursor: pointer;
 		transition: background-color ease-in-out 0.3s;
@@ -48,11 +48,12 @@
 		padding: 0;
 		position: relative;
 		top: 0;
-		transition: top 0.25s ease;
 		color: var(--white);
+		border-bottom: 3px solid var(--dark-green);
 	}
 	.dropdown-toggle:hover {
-		top: 3px;
+		color: var(--pink);
+		border-bottom: 3px solid var(--pink);
 	}
 	.dropdown-menu {
 		position: absolute;
@@ -97,6 +98,6 @@
 		height: 9px;
 		margin-left: 5px;
 		position: relative;
-		fill: #eb0000;
+		fill: var(--pink);
 	}
 </style>

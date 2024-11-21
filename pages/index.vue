@@ -15,6 +15,11 @@
 						<template #leftColumn>
 							<h1 class="banner__header fs-xl regular clr-yellow"><img src="/images/bee.svg" alt="" class="banner__bee" />{{ banner.header }}</h1>
 							<p class="fs-500" v-html="banner.intro" />
+							<ul>
+								<li v-for="item in banner.list">
+									{{ item }}
+								</li>
+							</ul>
 						</template>
 
 						<template #rightColumn>
@@ -51,27 +56,27 @@
 		<!-- SERVICES -->
 		<section class="pblock-6 clr-bg-light-lavender">
 			<div class="container container--1200">
-				<h2 class="fs-900 fw-600 regular clr-purple">{{ services.header }}</h2>
-				<div class="services">
+				<!-- <h2 class="fs-900 fw-600 regular clr-purple">{{ services.header }}</h2> -->
+				<!-- <div class="services">
 					<div v-for="service in services.list">
 						{{ service }}
 					</div>
-				</div>
-				<p class="bold">{{ services.copy }}</p>
-				<!-- <SplitContent gridColumns="3fr 1.5fr" alignItems="center" gridGap="8rem">
+				</div> -->
+				<!-- <p class="bold">{{ services.copy }}</p> -->
+				<SplitContent gridColumns="3fr 1.25fr" alignItems="center" gridGap="8rem">
 					<template #leftColumn>
 						<h2 class="fs-900 fw-600 regular clr-purple">{{ services.header }}</h2>
-						<div class="services">
-							<div v-for="service in services.list">
+						<ul class="services">
+							<li v-for="service in services.list">
 								{{ service }}
-							</div>
-						</div>
-						<p class="bold">{{ services.copy }}</p>
+							</li>
+						</ul>
 					</template>
 					<template #rightColumn>
-						<img src="/images/bee-house.webp" alt="" />
+						<img src="/images/bee-house.webp" alt="Illustration of a bee house" class="bee-house" />
 					</template>
-				</SplitContent> -->
+				</SplitContent>
+				<p class="contact bold text-center mt-8">{{ services.copy }}</p>
 			</div>
 		</section>
 
@@ -91,6 +96,10 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- MAP -->
+		<!-- prettier-ignore -->
+		<div style="overflow:hidden;resize:none;max-width:100%;height:500px;"><div id="g-mapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Northport,+NY,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="code-for-google-map" rel="nofollow" href="https://kbj9qpmy.com/bp" id="enable-map-info">Internet Provider</a></div>
 	</main>
 </template>
 
@@ -145,7 +154,20 @@
 	}
 	.services {
 		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		gap: 1rem;
+		column-gap: 5rem;
+		row-gap: 2rem;
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	.bee-house {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.contact {
+		background-color: var(--pink);
+		padding: 2rem;
+		border-radius: 1rem;
 	}
 </style>

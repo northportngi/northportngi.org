@@ -9,7 +9,7 @@
 					<NavigationDropDown :index="index" :label="item.label" :links="item.links" />
 				</li>
 				<li v-else>
-					<NuxtLink :to="item.path" class="navigation__link">{{ item.label }}</NuxtLink>
+					<NuxtLink :to="item.path" class="navigation__link" :class="item.slug">{{ item.label }}</NuxtLink>
 				</li>
 			</template>
 		</ul>
@@ -18,15 +18,17 @@
 
 <style lang="scss" scoped>
 	.navigation {
+		display: none;
 		font-weight: 400;
+		width: 100%;
+		transition: top 0.25s ease;
 		&--visible {
 			top: 90px;
 		}
 		&__dropdown {
 			display: none;
 		}
-		width: 100%;
-		transition: top 0.25s ease;
+
 		&__link {
 			color: var(--white);
 			text-decoration: none;
@@ -38,11 +40,8 @@
 			display: grid;
 			align-items: center;
 		}
-		// .router-link-active {
-		// 	color: var(--yellow);
-		// }
 	}
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		.navigation {
 			display: flex;
 			justify-content: flex-end;
@@ -54,7 +53,7 @@
 				gap: 2.5rem;
 			}
 			&__link {
-				min-height: 50px;
+				min-height: 40px;
 				display: flex;
 				align-items: center;
 				position: relative;
@@ -63,14 +62,20 @@
 				border-bottom: 3px solid var(--dark-green);
 				&:hover {
 					color: var(--pink);
-					border-bottom: 3px solid var(--pink);
+				}
+				&.donate {
+					background-color: var(--yellow);
+					color: var(--dark-green);
+					padding: 0.5rem 2rem;
+					border-radius: 500px;
+					&:hover {
+						background-color: var(--pink);
+					}
 				}
 			}
-			// .router-link-active {
-			// 	background-color: var(--red);
-			// 	border-radius: 0.5rem;
-			// 	color: var(--white);
-			// }
+			.router-link-active {
+				color: var(--pink);
+			}
 		}
 	}
 </style>

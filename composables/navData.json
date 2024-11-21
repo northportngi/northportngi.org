@@ -1,32 +1,39 @@
 {
-    "primary": [
-        {
-            "label": "About",
-            "path": "/about"
-        },
-        {
-            "label": "Get Involved",
-            "path": "/get-involved"
-        },
-        {
-            "label": "Education & Projects",
-            "path": "/education-and-projetcs"
-        },
-        {
-            "label": "News & Events",
-            "path": "/news-and-events"
-        },
-        {
-            "label": "Shop",
-            "path": "#"
-        },
-        {
-            "label": "Donate",
-            "path": "#"
-        },
-        {
-            "label": "Contact",
-            "path": "#"
-        }
-    ]
+	"primary": [
+		{
+			"label": "About",
+			"path": "/about",
+			"slug": "about"
+		},
+		{
+			"label": "Volunteer",
+			"path": "/get-involved/volunteer",
+			"slug": "volunteer"
+		},
+		{
+			"label": "Sponsors",
+			"path": "/our-sponsors",
+			"slug": "our-sponsors"
+		},
+		{
+			"label": "Education & Projects",
+			"path": "/education-and-projetcs",
+			"slug": "education-and-projetcs"
+		},
+		{
+			"label": "Farmer‘s Market",
+			"path": "/farmers-market",
+			"slug": "farmers-market"
+		},
+		{
+			"label": "Connect",
+			"path": "/connect",
+			"slug": "connect"
+		},
+		{
+			"label": "Donate",
+			"path": "/donate",
+			"slug": "donate"
+		}
+	]
 }
