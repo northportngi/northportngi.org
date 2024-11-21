@@ -35,6 +35,14 @@
 			<div class="container container--1200">
 				<SplitContent gridColumns="1.5fr 3fr" alignItems="center">
 					<template #leftColumn>
+						<!-- <div class="image-sillos">
+							<div class="image-sillos__image-1">
+								<img :src="why.image1" :alt="why.image1_alt" />
+							</div>
+							<div class="image-sillos__image-2">
+								<img :src="why.image2" :alt="why.image2_alt" />
+							</div>
+						</div> -->
 						<img src="/images/yellow-flowers.png" alt="" />
 					</template>
 					<template #rightColumn>
