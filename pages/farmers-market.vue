@@ -1,7 +1,3 @@
-<script setup>
-	const { data: entry } = await useAsyncData('farmers-market', () => queryContent('/farmers-market').findOne())
-</script>
-
 <template>
 	<div>
 		<!-- BANNER -->
@@ -10,7 +6,7 @@
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2" v-html="entry.header" />
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">NNGI at the Northport Farmer’s Market</h1>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>

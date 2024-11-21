@@ -1,7 +1,3 @@
-<script setup>
-	const { data: entry } = await useAsyncData('volunteer', () => queryContent('/volunteer').findOne())
-</script>
-
 <template>
 	<div>
 		<!-- BANNER -->
