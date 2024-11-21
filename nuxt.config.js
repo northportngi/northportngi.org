@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	css: ['@/assets/css/main.scss'],
 
-	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/seo', '@nuxtjs/prismic'],
+	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/seo'],
 
 	content: {
 		markdown: {

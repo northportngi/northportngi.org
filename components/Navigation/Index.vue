@@ -9,7 +9,7 @@
 					<NavigationDropDown :index="index" :label="item.label" :links="item.links" />
 				</li>
 				<li v-else>
-					<NuxtLink :to="item.path" class="navigation__link" :class="item.slug">{{ item.label }}</NuxtLink>
+					<NuxtLink :to="item.path" class="navigation__link" :class="item.slug" :target="item.external ? '_blank' : ''">{{ item.label }}</NuxtLink>
 				</li>
 			</template>
 		</ul>

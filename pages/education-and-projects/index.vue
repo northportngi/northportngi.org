@@ -1,3 +1,6 @@
+<script setup>
+	const { data: newsEntries } = await useAsyncData('education-and-projects', () => queryContent('education-and-projects').sort({ date: -1 }).find())
+</script>
 <template>
 	<div>
 		<!-- BANNER -->
@@ -29,12 +32,22 @@
 							</div>
 						</template>
 					</SplitContent>
-					<hr class="mblock-8" />
+					<hr class="mblock-14" />
 					<div class="text-center">
 						<h2 class="clr-green">Northport Invasives Presentation</h2>
 						<p>An Informative presentation given at a Northport Village Board meeting presented by Dr. Monica Zenyuh</p>
 						<Button label="Download the Presentation" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
-						<hr class="mblock-6" />
+					</div>
+					<hr class="mblock-14" />
+					<div class="text-center">
+						<h2 class="clr-green">Education & Past Events</h2>
+						<div class="container container--1400">
+							<div class="mblock-8">
+								<div class="news">
+									<Card v-for="entry in newsEntries" :title="entry.title" :teaser="entry.teaser" :path="entry._path" />
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -55,5 +68,20 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+	}
+	.news {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 4rem;
+	}
+	@media (min-width: 576px) {
+		.news {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (min-width: 1024px) {
+		.news {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 </style>
