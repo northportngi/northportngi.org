@@ -22,3 +22,6 @@ One of the things that we love about the native plant movement is that we don’
 You might have been surprised to see butterfly bush listed as an invasive, non-native plant. Although butterflies love them, butterfly bushes do not provide much nutrition, like dining at a fast-food restaurant. They cannot serve to host eggs or feed caterpillars. And they can spread to other places, serving to crowd out beneficial natives – plants that host a wide variety of insects.
 
 You may not have seen them spread on your own property, but we cannot always witness how seeds and plants are dispersed because we cannot see where birds drop seeds in their droppings. Our yards do not have walls and we are all connected- which is pretty amazing to consider!
+
+![cow-harbor-maples.jpg](/uploads/cow-harbor-maples.jpg)
+<figcaption>From left: Nicole Tamaro, Jon Holden, Roland Buzard, Meghan Dolan, Sara Abbass, Matt Gorman and Barbara Bolen</figcaption>
