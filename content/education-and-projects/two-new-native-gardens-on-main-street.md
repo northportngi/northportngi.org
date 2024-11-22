@@ -2,6 +2,7 @@
 title: 'Two New Native Gardens on Main Street'
 date: 2023-10-10
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
+image:
 ---
 
 Making a difference, one garden at a time. New slogan? No, but hopefully a phrase you have started to consider! We can all make a difference and there is no garden too small when it comes to a positive environmental impact. Let us introduce you to two new installations that you can enjoy while strolling down Main Street in downtown Northport.

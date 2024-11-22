@@ -1,5 +1,5 @@
 <script setup>
-	const { data: newsEntries } = await useAsyncData('education-and-projects', () => queryContent('education-and-projects').sort({ date: -1 }).find())
+	const { data: newsEntries, pending, error } = await useAsyncData('education-and-projects', () => queryContent('education-and-projects').sort({ date: -1 }).find())
 </script>
 <template>
 	<div>
@@ -44,7 +44,7 @@
 						<div class="container container--1400">
 							<div class="mblock-8">
 								<div class="news">
-									<Card v-for="entry in newsEntries" :title="entry.title" :teaser="entry.teaser" :path="entry._path" />
+									<Card v-for="entry in newsEntries" :title="entry.title" :teaser="entry.teaser" :path="entry._path" :date="formatDate(entry.date)" />
 								</div>
 							</div>
 						</div>
