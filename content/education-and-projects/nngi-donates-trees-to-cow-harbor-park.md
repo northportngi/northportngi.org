@@ -1,8 +1,8 @@
 ---
-title: 'NNGI Donates Trees to Cow Harbor Park'
-date: 2024-01-03
+title: NNGI Donates Trees to Cow Harbor Park
+date: 2024-01-03T00:00:00.000Z
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
-image:
+image: null
 ---
 
 NNGI is proud and excited to announce the donation of two native red maples (Acer rubrum) to Cow Harbor Park by the water in Northport Village. The inspiration for the donation was the fact that some trees may need to come down in the park due to the renovation of the nearby basketball court and public bathroom.

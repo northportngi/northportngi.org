@@ -1,8 +1,8 @@
 ---
-title: 'Pollinator-Friendly Fall Cleanup'
-date: 2023-10-03
+title: Pollinator-Friendly Fall Cleanup
+date: 2023-10-03T00:00:00.000Z
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
-image:
+image: null
 ---
 
 As the fall approaches, lovely leaves are starting to flutter to the ground. Unfortunately for many homeowners (and their landscapers!,) this means getting out leaf blowers and scouring their properties clean. As we have learned, this practice is extremely harmful to our precious birds, bees, butterflies, and other insects. We thought it would be helpful to provide you with some tips for continuing your ecologically-responsible gardening practices throughout the Fall and into the upcoming Winter season.
@@ -22,7 +22,6 @@ Fallen leaves are an important part of a healthy ecosystem for many reasons:
 Tread lightly with your garden shears, leaving seeds heads and stems untouched. We have found that once we have fallen in love with native plantings, we have come to love the beauty and interest of leaving our natives “wild” throughout the fall and winter months. But there is more to it than just aesthetics:
 
 1. Benefits of leaving seed heads untouched: As the song says, it’s important to “Feed the Birds!” The seeds of late-blooming natives like asters, coneflowers, goldenrods, and sunflowers provide hard-to-come-by meals for birds and other small animals during the winter months.
-
 2. Benefits of leaving stems intact: Hollow plant stems provide shelter for many insect species, particularly native bees (think mason, carpenter, and leafcutter), throughout the winter. Some butterfly species use the stems for hanging their chrysalids through the winter, while other insects lay their eggs on the stems. Interestingly, there are some species of bees (for example, mason bees) who spend a whole year growing in plant stems before emerging!
 
 ## Build a brush and/or rock pile
