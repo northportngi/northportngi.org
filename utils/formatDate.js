@@ -1,5 +1,3 @@
-// /utils/dateFormatter.js
-
 const getDayWithOrdinal = (day) => {
 	if (day > 3 && day < 21) return `${day}th` // Handle special case for 11th-13th
 	switch (day % 10) {
@@ -15,11 +13,18 @@ const getDayWithOrdinal = (day) => {
 }
 
 export const formatDate = (dateString) => {
+	if (!dateString) return '' // Handle cases where dateString is null or undefined
+
 	const date = new Date(dateString)
 
-	const day = getDayWithOrdinal(date.getDate()) // Format day with ordinal suffix
+	if (isNaN(date.getTime())) {
+		console.warn('Invalid date string:', dateString)
+		return '' // Handle invalid dates gracefully
+	}
+
+	const day = getDayWithOrdinal(date.getUTCDate()) // Use getUTCDate for consistent UTC formatting
 	const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date) // Full month name
-	const year = date.getFullYear() // Full year
+	const year = date.getUTCFullYear() // Use getUTCFullYear for consistency
 
 	return `${month} ${day}, ${year}`
 }

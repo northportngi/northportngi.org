@@ -2,7 +2,9 @@
 title: Aggressive vs. Invasive Plants
 date: '2024-06-14T00:00:00.000Z'
 teaser: This is the teaser!
-image: null
+image:
+    src: null
+    alt: 'Description of the image'
 ---
 
 The terms used to describe plants can be confusing, so here are some helpful definitions:

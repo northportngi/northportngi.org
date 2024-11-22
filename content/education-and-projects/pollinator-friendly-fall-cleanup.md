@@ -2,7 +2,9 @@
 title: Pollinator-Friendly Fall Cleanup
 date: 2023-10-03T00:00:00.000Z
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
-image: null
+image:
+    src: null
+    alt: 'Description of the image'
 ---
 
 As the fall approaches, lovely leaves are starting to flutter to the ground. Unfortunately for many homeowners (and their landscapers!,) this means getting out leaf blowers and scouring their properties clean. As we have learned, this practice is extremely harmful to our precious birds, bees, butterflies, and other insects. We thought it would be helpful to provide you with some tips for continuing your ecologically-responsible gardening practices throughout the Fall and into the upcoming Winter season.

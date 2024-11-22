@@ -2,7 +2,9 @@
 title: The Garden at the LILCO Building
 date: 2024-06-28T00:00:00.000Z
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
-image: null
+image:
+    src: null
+    alt: 'Description of the image'
 ---
 
 Joe Schmitz, the owner of the historical LILCO building in Northport Village contacted NNGI about adding native plants around the building. Due to its location in the heart of town, we jumped at the opportunity. In September of 2022, the space was transformed from an ecologically barren eyesore into a stunning pollinator-friendly garden.

@@ -2,7 +2,9 @@
 title: Mosquito Buckets
 date: '2024-06-05T00:00:00.000Z'
 teaser: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugit.
-image: null
+image:
+    src: null
+    alt: 'Description of the image'
 ---
 
 Mosquito buckets are an extremely effective way to rid your property of mosquitoes without killing our valuable pollinators or exposing your family to harmful chemicals from mosquito spraying. These buckets work by enticing adult female mosquitoes to lay their eggs in your bucket due to the presence of the fermented plant material. Mosquito dunks then kill the emerging larvae without harming any other creatures.

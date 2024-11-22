@@ -1,5 +1,5 @@
 <script setup>
-	const { data: newsEntries, pending, error } = await useAsyncData('education-and-projects', () => queryContent('education-and-projects').sort({ date: -1 }).find())
+	const { data: newsEntries } = await useAsyncData('education-and-projects', () => queryContent('education-and-projects').sort({ date: -1 }).find())
 </script>
 <template>
 	<div>
