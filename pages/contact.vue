@@ -5,12 +5,12 @@
 			<div class="pblock-8">
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
-						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Please Get In Touch</h1>
-							<p class="fs-500 bold">Have a question about Native Plants or Gardens?</p>
-							<p class="fs-500 bold">Interested in one of our lectures?</p>
-							<p class="fs-500 bold">Have a project that you would like us to consult on?</p>
-						</template>
+						< #leftColumn>
+						<h1 class="banner__header fs-xl regular clr-yellow mb-2">Please Get In Touch</h1>
+						<p class="fs-500 bold">Have a question about native plants or gardens?</p>
+						<p class="fs-500 bold">Interested in one of our lectures?</p>
+						<p class="fs-500 bold">Have a School, Scout or Library project that you would like us to consult on?</p>
+						<p class="fs-500 bold">Please get in touch with us by using the contact form below.</p>
 						<template #rightColumn> </template>
 					</SplitContent>
 				</div>

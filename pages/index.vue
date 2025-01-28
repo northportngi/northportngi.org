@@ -6,12 +6,13 @@
 				<div class="container">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1.5fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow"><img src="/images/bee.svg" alt="" class="banner__bee" />Hello and welcome to the Northport Native Garden Initiative (NNGI)!</h1>
-							<p class="fs-500">We are a non-profit (501(c)(3)) located in Northport, New York. Our aim is to educate people about how fun and easy it is to achieve the goals of a beautifully maintained landscape while implementing helpful ecological practices. <strong class="clr-pink">We do this through the following:</strong></p>
+							<h1 class="banner__header fs-xl regular clr-yellow">Welcome to the Northport Native Garden Initiative (NNGI)!</h1>
+							<p class="fs-500">We are a non-profit (501(c)(3)) located in Northport, New York. Our aim is to educate people about how fun and easy it is to achieve the goals of a beautifully maintained landscape while implementing helpful ecological practices.</p>
+							<p><strong>We do this through the following:</strong></p>
 							<ul>
 								<li>Educational programs</li>
-								<li>Plant Sale Events</li>
-								<li>Social media discussion groups and Education (Facebook/Instagram)</li>
+								<li>Plant sale events</li>
+								<li>Social media discussion groups and education (Facebook/Instagram)</li>
 							</ul>
 						</template>
 
@@ -45,19 +46,19 @@
 					<template #leftColumn>
 						<h2 class="fs-900 fw-600 regular clr-purple">Services</h2>
 						<ul class="services">
-							<li>Consultation and Garden Design</li>
 							<li>Speaking Engagements and Lectures</li>
+							<li>School and Community Gardens Collaborations</li>
 							<li>Scout Project Facilitation</li>
 							<li>Restoration and Invasive Species Guidance</li>
-							<li>Rain Garden Implementation Program</li>
-							<li>PTA and School Fundraiser Program</li>
+							<li>Native Plant Sourcing</li>
+							<li>Farmers Market Monthly Booth</li>
 						</ul>
 					</template>
 					<template #rightColumn>
 						<img src="/images/bee-house.webp" alt="Illustration of a bee house" class="bee-house" />
 					</template>
 				</SplitContent>
-				<p class="contact bold text-center mt-8">For more information or questions about these services please email us at: northportngi@gmail.com</p>
+				<p class="contact bold text-center mt-8">For more information or questions about these services please email us at: <a href="mailto:northportngi@gmail.com" class="clr-green">northportngi@gmail.com</a></p>
 			</div>
 		</section>
 
@@ -66,6 +67,7 @@
 			<div class="container container--1200">
 				<h2 class="clr-light-lavender script mb-1">Do Your Part</h2>
 				<p class="fs-600 mb-1 mb-2">A simple choice to help our environment by landscaping with native plants.</p>
+				<p><Button label="Take the Pledge" buttonLabelColor="green" buttonColor="white" buttonColorHover="white" buttonBorderColor="white" buttonLabelColorHover="green" buttonBorderColorHover="white" /></p>
 			</div>
 		</section>
 

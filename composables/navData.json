@@ -6,29 +6,38 @@
 			"slug": "about"
 		},
 		{
-			"label": "Volunteer",
-			"path": "/get-involved/volunteer",
-			"slug": "volunteer"
+			"label": "Get Involved",
+			"links": [
+				{ "label": "Stay in Touch", "path": "/get-involved/stay-in-touch", "slug": "stay-in-touch" },
+				{ "label": "Volunteer", "path": "/get-involved/volunteer", "slug": "volunteer" },
+				{ "label": "Pollinator Pathway Registration", "path": "/get-involved/pollinator-pathway-registration", "slug": "pollinator-pathway-registration" }
+			]
 		},
 		{
-			"label": "Sponsors",
-			"path": "/our-sponsors",
-			"slug": "our-sponsors"
+			"label": "Learn",
+			"path": "/learn",
+			"slug": "learn"
 		},
 		{
-			"label": "Education & Projects",
-			"path": "/education-and-projects",
-			"slug": "education-and-projects"
+			"label": "Projects",
+			"path": "/projects",
+			"slug": "projects"
 		},
 		{
-			"label": "Farmer‘s Market",
+			"label": "Farmers Market",
 			"path": "/farmers-market",
 			"slug": "farmers-market"
 		},
 		{
-			"label": "Connect",
-			"path": "/connect",
-			"slug": "connect"
+			"label": "Resources",
+			"path": "/resources",
+			"slug": "resources"
+		},
+
+		{
+			"label": "Contact",
+			"path": "/contact",
+			"slug": "contact"
 		},
 		{
 			"label": "Donate",
