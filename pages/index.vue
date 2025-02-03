@@ -67,7 +67,7 @@
 			<div class="container container--1200">
 				<h2 class="clr-light-lavender script mb-1">Do Your Part</h2>
 				<p class="fs-600 mb-1 mb-2">A simple choice to help our environment by landscaping with native plants.</p>
-				<p><Button label="Take the Pledge" buttonLabelColor="green" buttonColor="white" buttonColorHover="white" buttonBorderColor="white" buttonLabelColorHover="green" buttonBorderColorHover="white" /></p>
+				<p><Button url="#" label="Take the Pledge" buttonLabelColor="green" buttonColor="white" buttonColorHover="white" buttonBorderColor="white" buttonLabelColorHover="green" buttonBorderColorHover="white" /></p>
 			</div>
 		</section>
 

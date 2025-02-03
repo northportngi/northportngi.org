@@ -2,7 +2,22 @@
 export default defineNuxtConfig({
 	css: ['@/assets/css/main.scss'],
 
-	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/seo', '@nuxthq/studio'],
+	modules: [
+		'@nuxt/image',
+		'nuxt-viewport',
+		'@nuxt/fonts',
+		'@nuxtjs/seo',
+		[
+			'@storyblok/nuxt',
+			{
+				accessToken: '1USGnrZHovXGLU8fQrW8Wwtt',
+				apiOptions: {
+					version: 'draft',
+					region: 'us',
+				},
+			},
+		],
+	],
 	image: {
 		// Default provider (Nuxt built-in or external like Cloudflare, IPX, etc.)
 		provider: 'ipx', // Default local provider
@@ -15,11 +30,6 @@ export default defineNuxtConfig({
 					format: 'webp', // Convert to WebP format
 				},
 			},
-		},
-	},
-	content: {
-		markdown: {
-			anchorLinks: false,
 		},
 	},
 

@@ -23,8 +23,6 @@
 	}
 </style>
 <script setup>
-	import { ref, computed, onMounted, onUnmounted, defineProps } from 'vue'
-
 	// Define props
 	const props = defineProps({
 		targetCount: {

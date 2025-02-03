@@ -1,6 +1,4 @@
-<script setup>
-	const { data: newsEntries } = await useAsyncData('education-and-projects', () => queryContent('education-and-projects').sort({ date: -1 }).find())
-</script>
+<script setup></script>
 <template>
 	<div>
 		<!-- BANNER -->
@@ -36,18 +34,18 @@
 					<div class="text-center">
 						<h2 class="clr-green">Northport Invasives Presentation</h2>
 						<p>An Informative presentation given at a Northport Village Board meeting presented by Dr. Monica Zenyuh</p>
-						<Button label="Download the Presentation" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
+						<Button url="#" label="Download the Presentation" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
 					</div>
 					<hr class="mblock-14" />
 					<div class="text-center">
 						<h2 class="clr-green">Education & Past Events</h2>
-						<div class="container container--1400">
+						<!-- <div class="container container--1400">
 							<div class="mblock-8">
 								<div class="news">
 									<Card v-for="entry in newsEntries" :title="entry.title" :teaser="entry.teaser" :path="entry._path" :date="formatDate(entry.date)" />
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

@@ -8,9 +8,9 @@
 		{
 			"label": "Get Involved",
 			"links": [
-				{ "label": "Stay in Touch", "path": "/get-involved/stay-in-touch", "slug": "stay-in-touch" },
-				{ "label": "Volunteer", "path": "/get-involved/volunteer", "slug": "volunteer" },
-				{ "label": "Pollinator Pathway Registration", "path": "/get-involved/pollinator-pathway-registration", "slug": "pollinator-pathway-registration" }
+				{ "label": "Stay in Touch", "path": "/stay-in-touch", "slug": "stay-in-touch" },
+				{ "label": "Volunteer", "path": "/volunteer", "slug": "volunteer" },
+				{ "label": "Pollinator Pathway Registration", "path": "https://www.pollinator-pathway.org/register", "slug": "pollinator-pathway-registration", "external": true }
 			]
 		},
 		{
