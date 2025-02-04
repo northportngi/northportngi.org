@@ -100,6 +100,30 @@
 
 <style lang="scss" scoped>
 	.banner {
+		ul {
+			list-style: none; /* Remove default bullets */
+			padding-left: 0; /* Adjust padding if necessary */
+		}
+
+		ul li {
+			position: relative;
+			padding-left: 24px; /* Space for the custom bullet */
+		}
+
+		ul li::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 18px; /* Adjust size */
+			height: 18px;
+			background-image: url('/images/leaf.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translateY(-50%);
+		}
+
 		&__header {
 			max-width: 19ch;
 			position: relative;
