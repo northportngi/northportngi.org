@@ -94,7 +94,7 @@
 
 		<!-- MAP -->
 		<!-- prettier-ignore -->
-		<div style="overflow:hidden;resize:none;max-width:100%;height:500px;"><div id="g-mapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Northport,+NY,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="code-for-google-map" rel="nofollow" href="https://kbj9qpmy.com/bp" id="enable-map-info">Internet Provider</a></div>
+		<!-- <div style="overflow:hidden;resize:none;max-width:100%;height:500px;"><div id="g-mapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Northport,+NY,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="code-for-google-map" rel="nofollow" href="https://kbj9qpmy.com/bp" id="enable-map-info">Internet Provider</a></div> -->
 	</div>
 </template>
 
