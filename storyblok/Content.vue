@@ -1,9 +1,4 @@
 <script setup>
-	// Props: Accept the `blok` object
-	// defineProps({
-	// 	blok: Object,
-	// 	title: String,
-	// })
 	const props = defineProps({
 		title: {
 			type: String,

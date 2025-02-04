@@ -100,3 +100,6 @@ hr {
 	color: var(--light-gray); /* old IE */
 	background-color: var(--light-gray); /* Modern Browsers */
 }
+ul li p {
+	margin: 1rem 0;
+}
