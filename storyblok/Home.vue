@@ -23,7 +23,7 @@
 						</template>
 
 						<template #rightColumn>
-							<img :src="blok.banner_flyer.filename" alt="Illustration of native flowers" class="banner__flyer" />
+							<nuxt-img :src="blok.banner_flyer.filename" alt="Farmer‘s Market dates flyer." format="webp" sizes="(max-width: 640px) 100vw, 350px" :modifiers="{ width: 700 }" style="max-width: 350px" width="350" height="452" class="banner__flyer" />
 						</template>
 					</SplitContent>
 				</div>
@@ -35,7 +35,7 @@
 			<div class="container container--1200">
 				<SplitContent gridColumns="2.25fr 3fr" alignItems="center">
 					<template #leftColumn>
-						<img src="/images/nngi-illustration.webp" alt="Illustration of native flowers" />
+						<nuxt-img src="https://a-us.storyblok.com/f/1023068/700x626/9265603d75/nngi-illustration.png" alt="Illustration of native flowers." format="webp" sizes="(max-width: 640px) 100vw, 350px" :modifiers="{ width: 700 }" width="445" height="398" style="max-width: 500px" />
 					</template>
 					<template #rightColumn>
 						<h2 class="fs-900 fw-600 regular clr-purple">{{ blok.why_header }}</h2>
@@ -55,7 +55,7 @@
 					</template>
 					<template #rightColumn>
 						<!-- <img src="/images/bee-house.webp" alt="Illustration of a bee house" class="bee-house" /> -->
-						<img src="/images/yellow-flowers.png" alt="Illustration of yellow native flowers" />
+						<nuxt-img src="https://a-us.storyblok.com/f/1023068/783x800/dce09ad0d8/yellow-flowers.png" alt="Illustration of yellow native flowers." format="webp" sizes="(max-width: 640px) 100vw, 350px" :modifiers="{ width: 700 }" style="max-width: 350px" width="317" height="324" />
 					</template>
 				</SplitContent>
 				<p class="contact bold text-center mt-8">For more information or questions about these services please <NuxtLink to="/contact" class="green">contact us</NuxtLink>.</p>
