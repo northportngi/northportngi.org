@@ -1,39 +1,25 @@
 <script setup>
 	const props = defineProps({
-		title: {
-			type: String,
+		entry: {
+			type: Object,
 			required: true,
-		},
-		path: {
-			type: String,
-			required: true,
-		},
-		teaser: {
-			type: String,
-			required: true,
-		},
-		date: {
-			type: String,
-			required: true,
-		},
-		image: {
-			type: String,
 		},
 	})
 </script>
 <template>
 	<article>
+		<!-- <pre>
+		{{ entry }}
+	</pre
+		> -->
 		<div class="card">
 			<div class="image">
-				<img src="https://placehold.co/600x350" alt="" />
+				<NuxtLink :to="`/learn/${entry.slug}`"> <nuxt-img :src="entry.content.cover_image.filename" provider="storyblok" alt="Cover Image" width="600" height="350" format="webp" style="width: 100%; height: 100%" /></NuxtLink>
 			</div>
 			<div class="content">
-				<div class="title fs-500 bold clr-green mb-1">{{ title }}</div>
-				<!-- <div>{{ date }}</div> -->
-				<p class="teaser fs-400 mt-1 mb-0">{{ teaser }}</p>
-				<p class="fs-400">
-					<NuxtLink :to="path" class="clr-green underline"> Read more… </NuxtLink>
-				</p>
+				<div class="title fs-500 bold clr-green mb-1 text-center">
+					<NuxtLink :to="`/learn/${entry.slug}`" class="clr-green underline">{{ entry.name }}</NuxtLink>
+				</div>
 			</div>
 		</div>
 	</article>

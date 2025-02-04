@@ -1,9 +1,5 @@
 <script setup>
 	const props = defineProps({
-		title: {
-			type: String,
-			required: true,
-		},
 		blok: {
 			type: Object,
 			required: true,
@@ -13,11 +9,9 @@
 
 <template>
 	<article>
-		<h1>{{ title }}</h1>
 		<div class="news">
 			<section v-for="entry in blok" :key="blok.uuid">
-				<Card :title="entry.name" :teaser="entry.teaser" path="#" />
-				<!-- <StoryblokRichText :doc="entry.content.body" /> -->
+				<Card :entry="entry" />
 			</section>
 		</div>
 	</article>

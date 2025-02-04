@@ -18,9 +18,12 @@ export default defineNuxtConfig({
 			},
 		],
 	],
+
 	image: {
-		// Default provider (Nuxt built-in or external like Cloudflare, IPX, etc.)
-		provider: 'ipx', // Default local provider
+		provider: 'storyblok', // Set Storyblok as the default image provider
+		storyblok: {
+			baseURL: 'https://a-us.storyblok.com',
+		},
 		presets: {
 			thumbnail: {
 				modifiers: {

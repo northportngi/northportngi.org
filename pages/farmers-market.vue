@@ -1,12 +1,21 @@
+<script setup>
+	const storyblokApi = useStoryblokApi()
+	const { data } = await useAsyncData('farmers-market', () => storyblokApi.get('cdn/stories/farmers-market', { version: 'published' }))
+	const entry = data.value.data.story
+</script>
 <template>
 	<div>
+		<!-- <pre>
+		{{ entry }}
+	</pre
+		> -->
 		<!-- BANNER -->
 		<div class="banner green-bg-pattern clr-cream">
 			<div class="pblock-8">
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">NNGI at the Northport Farmer’s Market</h1>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ entry.content.banner_header }}</h1>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -18,12 +27,10 @@
 				<div class="mblock-8">
 					<SplitContent gridGap="8rem" gridColumns="500px 1fr">
 						<template #leftColumn>
-							<img src="https://placehold.co/600x400" alt="" />
+							<nuxt-img :src="entry.content.page_image.filename" provider="storyblok" :alt="entry.content.page_image.alt" format="webp" style="width: 100%; height: 100%" />
 						</template>
 						<template #rightColumn>
-							<p>NNGI sets up a booth monthly at the Northport Farmer’s Market in downtown Northport Village. This is a great opportunity to pick up some native plants to enhance the beauty and biodiversity of your home. The booth is also staffed by our resident native plant experts, so come down with your questions!</p>
-							<p>You can find the NNGI booth right at the foot of Main Street right by the harbor.</p>
-							<h2 class="clr-green mt-0 mb-1 fs-700">Check back for 2025 dates!</h2>
+							<StoryblokRichText :doc="entry.content.page_copy" />
 						</template>
 					</SplitContent>
 				</div>
