@@ -47,7 +47,7 @@
 				<div class="text-center">
 					<h2 class="clr-green">Northport Invasives Presentation</h2>
 					<p>An Informative presentation given at a Northport Village Board meeting presented by Dr. Monica Zenyuh</p>
-					<Button url="/downloads/Northports-Invasives.pdf" label="Download the Presentation" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
+					<a href="/downloads/Northports-Invasives.pdf" class="cta-link">Download the Presentation</a>
 				</div>
 				<hr class="mblock-8" />
 			</div>
