@@ -8,15 +8,11 @@
 </script>
 
 <template>
-	<!-- <pre>
-			{{ entry }}
-		</pre
-			> -->
-	<article>
+	<article class="news-entry">
 		<!-- BANNER -->
 		<div class="banner green-bg-pattern clr-cream">
 			<div class="pblock-8">
-				<div class="container container--1000 text-center">
+				<div class="container container--1200 text-center">
 					<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ entry.name }}</h1>
 					<p>{{ entry.content.teaser }}</p>
 				</div>

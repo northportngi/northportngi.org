@@ -5,6 +5,11 @@
 	const { data: entries } = await storyblokApi.get('cdn/stories', {
 		excluding_fields: 'body',
 		content_type: 'Content',
+		filter_query: {
+			category: {
+				in: 'Projects',
+			},
+		},
 	})
 </script>
 
@@ -22,6 +27,11 @@
 						<template #rightColumn> </template>
 					</SplitContent>
 				</div>
+			</div>
+		</div>
+		<div class="container container--1400">
+			<div class="mblock-8">
+				<Content :blok="entries.stories" />
 			</div>
 		</div>
 	</main>

@@ -5,6 +5,11 @@
 	const { data: entries } = await storyblokApi.get('cdn/stories', {
 		excluding_fields: 'body',
 		content_type: 'Content',
+		filter_query: {
+			category: {
+				in: 'Learn',
+			},
+		},
 	})
 </script>
 
@@ -42,7 +47,7 @@
 				<div class="text-center">
 					<h2 class="clr-green">Northport Invasives Presentation</h2>
 					<p>An Informative presentation given at a Northport Village Board meeting presented by Dr. Monica Zenyuh</p>
-					<Button url="#" label="Download the Presentation" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
+					<Button url="/downloads/Northports-Invasives.pdf" label="Download the Presentation" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
 				</div>
 				<hr class="mblock-8" />
 			</div>

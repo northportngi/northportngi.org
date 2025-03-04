@@ -22,13 +22,13 @@
 			<div class="container container--1400">
 				<div class="mblock-8">
 					<ul class="sponsors fs-600 bold">
-						<li><a href="https://www.linpi.org" target="_blank">Long Island Native Plant Initiative</a></li>
-						<li><a href="https://www.rewildlongisland.org" target="_blank">ReWild Long Island</a></li>
-						<li><a href="https://saramaireadlandscapedesign.com" target="_blank">Sara Mairead Landscape Design</a></li>
-						<li><a href="https://cals.cornell.edu/cornell-cooperative-extension" target="_blank">Cornell Cooperative Extension of Suffolk County</a></li>
-						<li><a href="https://www.facebook.com/people/Tyska-Native-Plants-Consulting/100081594603149" target="_blank">Tyska Native Plants & Consulting</a></li>
-						<li><a href="https://www.kmsnativeplants.com" target="_blank">KMS Native Plants</a></li>
-						<li><a href="https://www.dropseednativelandscapesli.com" target="_blank">Dropseed Native Plant</a></li>
+						<li><a href="https://www.linpi.org" target="_blank" class="green">Long Island Native Plant Initiative</a></li>
+						<li><a href="https://www.rewildlongisland.org" target="_blank" class="green">ReWild Long Island</a></li>
+						<li><a href="https://saramaireadlandscapedesign.com" target="_blank" class="green">Sara Mairead Landscape Design</a></li>
+						<li><a href="https://cals.cornell.edu/cornell-cooperative-extension" target="_blank" class="green">Cornell Cooperative Extension of Suffolk County</a></li>
+						<li><a href="https://www.facebook.com/people/Tyska-Native-Plants-Consulting/100081594603149" target="_blank" class="green">Tyska Native Plants & Consulting</a></li>
+						<li><a href="https://www.kmsnativeplants.com" target="_blank" class="green">KMS Native Plants</a></li>
+						<li><a href="https://www.dropseednativelandscapesli.com" target="_blank" class="green">Dropseed Native Plant</a></li>
 						<li>BONAP</li>
 					</ul>
 				</div>

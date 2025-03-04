@@ -23,7 +23,6 @@
 					userName: 'northportngi',
 					formHash: props.formid, // Use `props.formid` to reference the prop
 					autoResize: true,
-					height: '833',
 					async: true,
 					host: 'wufoo.com',
 					header: 'hide',
