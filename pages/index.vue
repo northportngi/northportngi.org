@@ -36,6 +36,7 @@
 		method: 'POST',
 		body: JSON.stringify({ query }),
 		headers: { 'Content-Type': 'application/json' },
+		lazy: true,
 	})
 	const page = data.value.data.homepage
 </script>
