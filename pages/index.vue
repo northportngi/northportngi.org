@@ -1,22 +1,14 @@
 <script setup>
 	const config = useRuntimeConfig()
-	const query = `query {
-		homepage(where: {id: "cm80ed6cc3s6l07lr2xyzo3m7"}) {
-			title
-			banner {
+	const query = gql`
+		query GetHomepage {
+			homepage(where: { id: "cm80ed6cc3s6l07lr2xyzo3m7" }) {
 				title
-				copy {html}
-				image {
-					url
-					height
-					width
-					altText
-				}
-			}
-			sections {
-				... on Section {
+				banner {
 					title
-					copy{html}
+					copy {
+						html
+					}
 					image {
 						url
 						height
@@ -24,25 +16,39 @@
 						altText
 					}
 				}
+				sections {
+					... on Section {
+						title
+						copy {
+							html
+						}
+						image {
+							url
+							height
+							width
+							altText
+						}
+					}
+				}
+				pledgeTakers
+				nativePlants
+				rainGardens
+				chemicalFreeYards
+				masonBeeHouses
 			}
-			pledgeTakers
-			nativePlants
-			rainGardens
-			chemicalFreeYards
-			masonBeeHouses
 		}
-	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-		lazy: true,
-	})
-	const page = data.value.data.homepage
+	`
+	const { data } = await useAsyncQuery(query)
+	// const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
+	// 	method: 'POST',
+	// 	body: JSON.stringify({ query }),
+	// 	headers: { 'Content-Type': 'application/json' },
+	// 	lazy: true,
+	// })
+	const page = data.value.homepage
 </script>
 <template>
 	<div>
-		<!-- BANNER -->
 		<div id="banner" class="banner green-bg-pattern clr-cream">
 			<div class="pblock-8">
 				<div class="container">

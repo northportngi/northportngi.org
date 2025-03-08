@@ -8,8 +8,14 @@ export default defineNuxtConfig({
 		defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
 	},
 
-	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxtjs/seo'],
-
+	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxtjs/seo', '@nuxtjs/apollo'],
+	apollo: {
+		clients: {
+			default: {
+				httpEndpoint: process.env.NUXT_PUBLIC_HYGRAPHQL_ENDPOINT,
+			},
+		},
+	},
 	app: {
 		head: {
 			htmlAttrs: {
