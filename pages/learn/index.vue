@@ -1,16 +1,37 @@
 <script setup>
-	// Access the Storyblok API
-	const storyblokApi = useStoryblokApi()
-
-	const { data: entries } = await storyblokApi.get('cdn/stories', {
-		excluding_fields: 'body',
-		content_type: 'Content',
-		filter_query: {
-			category: {
-				in: 'Learn',
-			},
-		},
+	const config = useRuntimeConfig()
+	const query = `query {
+		learn(where: {id: "cm80nm1879nci08mytb0ttclf"}) {
+			title
+			banner {
+				title
+				copy { html }
+			}
+			youTubeVideos
+			invasivesCopy{html}
+			pdfFile {
+				url
+			}
+		}
+		articles(where: {category: learn}) {
+			title
+			slug
+			category
+			mainImage {
+				url(transformation: { image: { resize: { width: 600, height: 350, fit: crop } } })
+				height
+				width
+				altText
+			}
+		}
+	}`
+	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
+		method: 'POST',
+		body: JSON.stringify({ query }),
+		headers: { 'Content-Type': 'application/json' },
 	})
+	const page = data.value.data.learn
+	const articles = data.value.data.articles
 </script>
 
 <template>
@@ -21,8 +42,8 @@
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Learn</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis repudiandae quod quia suscipit laudantium sapiente nostrum iusto quasi in incidunt deleniti, repellendus id repellat autem ipsum, dicta voluptas delectus neque!</p>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ page.banner.title }}</h1>
+							<div v-html="page.banner.copy.html" />
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -31,28 +52,29 @@
 		</div>
 		<div class="container container--1400">
 			<div class="mblock-8">
-				<SplitContent gridGap="3rem" gridColumns="1fr 1fr">
-					<template #leftColumn>
-						<div class="video">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/HZHzAwQqNYc?si=H-SBCJfvr-blRgJ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</div>
-					</template>
-					<template #rightColumn>
-						<div class="video">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/84Qg5fAiKbM?si=ya6lj8kjbQe_kRgk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</div>
-					</template>
-				</SplitContent>
+				<div class="videos">
+					<div class="video" v-for="(video, index) in page.youTubeVideos" :key="index">
+						<div v-html="video" />
+					</div>
+				</div>
 				<hr class="mblock-8" />
 				<div class="text-center">
-					<h2 class="clr-green">Northport Invasives Presentation</h2>
-					<p>An Informative presentation given at a Northport Village Board meeting presented by Dr. Monica Zenyuh</p>
-					<a href="/downloads/Northports-Invasives.pdf" class="cta-link">Download the Presentation</a>
+					<div v-html="page.invasivesCopy.html" />
+					<a :href="page.pdfFile.url" class="cta-link" target="_blank">Download the Presentation</a>
 				</div>
 				<hr class="mblock-8" />
 			</div>
-
-			<Content :blok="entries.stories" />
+			<div class="container container--1400">
+				<div class="mblock-8">
+					<article>
+						<div class="news">
+							<section v-for="article in articles" :key="article.slug">
+								<Card :article="article" />
+							</section>
+						</div>
+					</article>
+				</div>
+			</div>
 		</div>
 	</main>
 </template>

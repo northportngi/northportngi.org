@@ -1,3 +1,22 @@
+<script setup>
+	const config = useRuntimeConfig()
+	const query = `query {
+		simplePage(where: {slug: "contact-us"}) {
+			title
+			banner {
+				title
+				copy {html}
+			}
+			copy {html}
+		}
+	}`
+	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
+		method: 'POST',
+		body: JSON.stringify({ query }),
+		headers: { 'Content-Type': 'application/json' },
+	})
+	const page = data.value.data.simplePage
+</script>
 <template>
 	<div>
 		<!-- BANNER -->
@@ -6,11 +25,8 @@
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Please Get In Touch</h1>
-							<p class="fs-500 bold">Have a question about native plants or gardens?</p>
-							<p class="fs-500 bold">Interested in one of our lectures?</p>
-							<p class="fs-500 bold">Have a School, Scout or Library project that you would like us to consult on?</p>
-							<p class="fs-500 bold">Please get in touch with us by using the contact form below.</p>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ page.banner.title }}</h1>
+							<div v-html="page.banner.copy.html" class="fs-500 bold" />
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -40,13 +56,5 @@
 		&__header {
 			max-width: 590px;
 		}
-	}
-	.sponsors {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 2rem;
-		list-style: none;
-		padding: 0;
-		margin: 0;
 	}
 </style>

@@ -1,0 +1,27 @@
+.gallery {
+	display: grid;
+	gap: 2rem;
+	div {
+		flex: 1;
+	}
+	&__thumbnail {
+		border: 1px solid var(--light-gray);
+		border-radius: 0.5rem;
+		flex: 0 0 30%;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		&:hover {
+			scale: 1.05;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.gallery {
+		&--2 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		&--3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

@@ -20,8 +20,6 @@
 					<SplitContent gridGap="8rem" gridColumns="1fr 500px ">
 						<template #leftColumn>
 							<p><strong>Plant sale volunteers can take on one shift or multiple shifts.</strong> <br />Our volunteers will help with sorting plants for orders, organizing orders and helping with pick-up. Thank you for your help!</p>
-							<!-- <Button label="Liability Waiver" buttonColor="purple" buttonBorderColor="purple" buttonColorHover="green" buttonBorderColorHover="green" />
-							<hr class="mblock-6" /> -->
 							<WufooForm formid="m7ou7d50ewqn6t" />
 						</template>
 						<template #rightColumn>

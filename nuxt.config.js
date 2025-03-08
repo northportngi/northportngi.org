@@ -8,39 +8,7 @@ export default defineNuxtConfig({
 		defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
 	},
 
-	modules: [
-		'@nuxt/image',
-		'nuxt-viewport',
-		'@nuxt/fonts',
-		'@nuxtjs/seo',
-		[
-			'@storyblok/nuxt',
-			{
-				accessToken: '1USGnrZHovXGLU8fQrW8Wwtt',
-				apiOptions: {
-					version: 'draft',
-					region: 'us',
-				},
-			},
-		],
-	],
-
-	image: {
-		provider: 'storyblok', // Set Storyblok as the default image provider
-		storyblok: {
-			baseURL: 'https://a-us.storyblok.com',
-		},
-		presets: {
-			thumbnail: {
-				modifiers: {
-					width: 600,
-					height: 350,
-					fit: 'cover', // Crop the image
-					format: 'webp', // Convert to WebP format
-				},
-			},
-		},
-	},
+	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxtjs/seo'],
 
 	app: {
 		head: {
@@ -55,6 +23,10 @@ export default defineNuxtConfig({
 			],
 		},
 	},
-
+	runtimeConfig: {
+		public: {
+			hygraphEndpoint: process.env.NUXT_PUBLIC_HYGRAPHQL_ENDPOINT,
+		},
+	},
 	compatibilityDate: '2024-08-05',
 })

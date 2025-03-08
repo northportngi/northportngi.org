@@ -1,7 +1,27 @@
 <script setup>
-	const storyblokApi = useStoryblokApi()
-	const { data } = await useAsyncData('farmers-market', () => storyblokApi.get('cdn/stories/farmers-market', { version: 'published' }))
-	const entry = data.value.data.story
+	const config = useRuntimeConfig()
+	const query = `query {
+		farmersMarketPage(where: {id: "cm80iga5v6god08myvs25usjx"}) {
+			title
+			banner {
+				title
+				copy {html}
+			}
+			pageImage {
+				url
+				height
+				width
+				altText
+			}
+			copy {html}
+		}
+	}`
+	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
+		method: 'POST',
+		body: JSON.stringify({ query }),
+		headers: { 'Content-Type': 'application/json' },
+	})
+	const page = data.value.data.farmersMarketPage
 </script>
 <template>
 	<div>
@@ -15,7 +35,7 @@
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ entry.content.banner_header }}</h1>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ page.banner.title }}</h1>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -27,10 +47,10 @@
 				<div class="mblock-8">
 					<SplitContent gridGap="8rem" gridColumns="500px 1fr">
 						<template #leftColumn>
-							<nuxt-img :src="entry.content.page_image.filename" provider="storyblok" :alt="entry.content.page_image.alt" format="webp" style="width: 100%; height: 100%" />
+							<nuxt-img :src="page.pageImage.url" :alt="page.pageImage.altText" format="webp" style="width: 100%; height: 100%" />
 						</template>
 						<template #rightColumn>
-							<StoryblokRichText :doc="entry.content.page_copy" />
+							<div v-html="page.copy.html" />
 						</template>
 					</SplitContent>
 				</div>

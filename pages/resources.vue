@@ -1,5 +1,28 @@
 <script setup>
-	// const { data: entry } = await useAsyncData('sponsors', () => queryContent('/sponsors').findOne())
+	const config = useRuntimeConfig()
+	const query = `query {
+		resource(where: {id: "cm80jbttl75o108mybi9pzqld"}) {
+			title
+			banner {
+				title
+				copy {html}
+			}
+			copy {html}
+			sponsors {
+				... on Link {
+					label
+					url
+					openInNewTab
+				}
+			}
+		}
+	}`
+	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
+		method: 'POST',
+		body: JSON.stringify({ query }),
+		headers: { 'Content-Type': 'application/json' },
+	})
+	const page = data.value.data.resource
 </script>
 
 <template>
@@ -10,8 +33,10 @@
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="3fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Native Plant Network</h1>
-							<p class="fs-600 bold clr-white">Connecting Communities & Resources</p>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">{{ page.title }}</h1>
+							<div class="fs-600 bold clr-white">
+								<div v-html="page.banner.copy.html" />
+							</div>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
@@ -21,15 +46,11 @@
 		<main>
 			<div class="container container--1400">
 				<div class="mblock-8">
+					<div v-if="page.copy.html" v-html="page.copy.html" class="sponsors fs-600 bold" />
 					<ul class="sponsors fs-600 bold">
-						<li><a href="https://www.linpi.org" target="_blank" class="green">Long Island Native Plant Initiative</a></li>
-						<li><a href="https://www.rewildlongisland.org" target="_blank" class="green">ReWild Long Island</a></li>
-						<li><a href="https://saramaireadlandscapedesign.com" target="_blank" class="green">Sara Mairead Landscape Design</a></li>
-						<li><a href="https://cals.cornell.edu/cornell-cooperative-extension" target="_blank" class="green">Cornell Cooperative Extension of Suffolk County</a></li>
-						<li><a href="https://www.facebook.com/people/Tyska-Native-Plants-Consulting/100081594603149" target="_blank" class="green">Tyska Native Plants & Consulting</a></li>
-						<li><a href="https://www.kmsnativeplants.com" target="_blank" class="green">KMS Native Plants</a></li>
-						<li><a href="https://www.dropseednativelandscapesli.com" target="_blank" class="green">Dropseed Native Plant</a></li>
-						<li>BONAP</li>
+						<li v-for="sponsor in page.sponsors">
+							<a :href="sponsor.url" :target="sponsor.openInNewTab ? '_blank' : ''" class="green">{{ sponsor.label }}</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -43,7 +64,7 @@
 			max-width: 590px;
 		}
 	}
-	.sponsors {
+	ul {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 2rem;
