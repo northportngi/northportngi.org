@@ -10,7 +10,7 @@
 						html
 					}
 					image {
-						url
+						url(transformation: { image: { resize: { width: 450, fit: crop } } })
 						height
 						width
 						altText
@@ -53,7 +53,7 @@
 						</template>
 
 						<template #rightColumn>
-							<nuxt-img :src="page.banner.image.url" :alt="page.banner.image.altText" sizes="(max-width: 640px) 100vw, 350px" :modifiers="{ width: 700 }" style="max-width: 350px" width="350" height="452" class="banner__flyer" />
+							<nuxt-img :src="page.banner.image.url" :alt="page.banner.image.altText" width="350" height="452" class="banner__flyer" />
 						</template>
 					</SplitContent>
 				</div>
