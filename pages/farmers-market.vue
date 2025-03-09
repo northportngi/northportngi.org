@@ -1,34 +1,32 @@
 <script setup>
 	const config = useRuntimeConfig()
-	const query = `query {
-		farmersMarketPage(where: {id: "cm80iga5v6god08myvs25usjx"}) {
-			title
-			banner {
+	const query = gql`
+		query {
+			farmersMarketPage(where: { id: "cm80iga5v6god08myvs25usjx" }) {
 				title
-				copy {html}
+				banner {
+					title
+					copy {
+						html
+					}
+				}
+				pageImage {
+					url
+					height
+					width
+					altText
+				}
+				copy {
+					html
+				}
 			}
-			pageImage {
-				url
-				height
-				width
-				altText
-			}
-			copy {html}
 		}
-	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-	})
-	const page = data.value.data.farmersMarketPage
+	`
+	const { data } = await useAsyncQuery(query)
+	const page = data.value.farmersMarketPage
 </script>
 <template>
 	<div>
-		<!-- <pre>
-		{{ entry }}
-	</pre
-		> -->
 		<!-- BANNER -->
 		<div class="banner green-bg-pattern clr-cream">
 			<div class="pblock-8">

@@ -1,32 +1,34 @@
 <script setup>
 	const config = useRuntimeConfig()
-	const query = `query {
-		aboutPage(where: {id: "cm80h7l9h5nb808my9ztfhist"}) {
-			title
-			banner {
+	const query = gql`
+		query {
+			aboutPage(where: { id: "cm80h7l9h5nb808my9ztfhist" }) {
 				title
-				copy {html}
-			}
-			bios {
-				... on Bio {
-					name
-					bio {html}
-					photo {
-						url
-						height
-						width
-						altText
+				banner {
+					title
+					copy {
+						html
+					}
+				}
+				bios {
+					... on Bio {
+						name
+						bio {
+							html
+						}
+						photo {
+							url
+							height
+							width
+							altText
+						}
 					}
 				}
 			}
 		}
-	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-	})
-	const page = data.value.data.aboutPage
+	`
+	const { data } = await useAsyncQuery(query)
+	const page = data.value.aboutPage
 </script>
 
 <template>

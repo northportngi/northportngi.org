@@ -2,7 +2,7 @@
 	useModal()
 	const config = useRuntimeConfig()
 	const route = useRoute()
-	const query = `query {
+	const query = gql`query {
 		article(where: {slug: "${route.params.slug}"}) {
 			title
 			showMainImage
@@ -25,12 +25,8 @@
 			}
 		}
 	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-	})
-	const article = data.value.data.article
+	const { data } = await useAsyncQuery(query)
+	const article = data.value.article
 	const showMainImage = ref(article.showMainImage)
 </script>
 

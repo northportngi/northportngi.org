@@ -39,12 +39,6 @@
 		}
 	`
 	const { data } = await useAsyncQuery(query)
-	// const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-	// 	method: 'POST',
-	// 	body: JSON.stringify({ query }),
-	// 	headers: { 'Content-Type': 'application/json' },
-	// 	lazy: true,
-	// })
 	const page = data.value.homepage
 </script>
 <template>

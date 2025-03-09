@@ -1,33 +1,35 @@
 <script setup>
 	const config = useRuntimeConfig()
-	const query = `query {
-		simplePage(where: {slug: "projects"}) {
-			title
-			banner {
+	const query = gql`
+		query {
+			simplePage(where: { slug: "projects" }) {
 				title
-				copy { html }
+				banner {
+					title
+					copy {
+						html
+					}
+				}
+				copy {
+					html
+				}
 			}
-			copy { html }
-		}
-		articles(where: {category: projects}) {
-			title
-			slug
-			category
-			mainImage {
-				url(transformation: { image: { resize: { width: 600, height: 350, fit: crop } } })
-				height
-				width
-				altText
+			articles(where: { category: projects }) {
+				title
+				slug
+				category
+				mainImage {
+					url(transformation: { image: { resize: { width: 600, height: 350, fit: crop } } })
+					height
+					width
+					altText
+				}
 			}
 		}
-	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-	})
-	const page = data.value.data.simplePage
-	const articles = data.value.data.articles
+	`
+	const { data } = await useAsyncQuery(query)
+	const page = data.value.simplePage
+	const articles = data.value.articles
 </script>
 
 <template>

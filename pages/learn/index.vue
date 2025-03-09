@@ -1,37 +1,39 @@
 <script setup>
 	const config = useRuntimeConfig()
-	const query = `query {
-		learn(where: {id: "cm80nm1879nci08mytb0ttclf"}) {
-			title
-			banner {
+	const query = gql`
+		query {
+			learn(where: { id: "cm80nm1879nci08mytb0ttclf" }) {
 				title
-				copy { html }
+				banner {
+					title
+					copy {
+						html
+					}
+				}
+				youTubeVideos
+				invasivesCopy {
+					html
+				}
+				pdfFile {
+					url
+				}
 			}
-			youTubeVideos
-			invasivesCopy{html}
-			pdfFile {
-				url
+			articles(where: { category: learn }) {
+				title
+				slug
+				category
+				mainImage {
+					url(transformation: { image: { resize: { width: 600, height: 350, fit: crop } } })
+					height
+					width
+					altText
+				}
 			}
 		}
-		articles(where: {category: learn}) {
-			title
-			slug
-			category
-			mainImage {
-				url(transformation: { image: { resize: { width: 600, height: 350, fit: crop } } })
-				height
-				width
-				altText
-			}
-		}
-	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-	})
-	const page = data.value.data.learn
-	const articles = data.value.data.articles
+	`
+	const { data } = await useAsyncQuery(query)
+	const page = data.value.learn
+	const articles = data.value.articles
 </script>
 
 <template>

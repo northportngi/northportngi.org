@@ -29,10 +29,5 @@ export default defineNuxtConfig({
 			],
 		},
 	},
-	runtimeConfig: {
-		public: {
-			hygraphEndpoint: process.env.NUXT_PUBLIC_HYGRAPHQL_ENDPOINT,
-		},
-	},
 	compatibilityDate: '2024-08-05',
 })

@@ -1,21 +1,23 @@
 <script setup>
 	const config = useRuntimeConfig()
-	const query = `query {
-		simplePage(where: {slug: "contact-us"}) {
-			title
-			banner {
+	const query = gql`
+		query {
+			simplePage(where: { slug: "contact-us" }) {
 				title
-				copy {html}
+				banner {
+					title
+					copy {
+						html
+					}
+				}
+				copy {
+					html
+				}
 			}
-			copy {html}
 		}
-	}`
-	const { data, pending, error } = await useFetch(config.public.hygraphEndpoint, {
-		method: 'POST',
-		body: JSON.stringify({ query }),
-		headers: { 'Content-Type': 'application/json' },
-	})
-	const page = data.value.data.simplePage
+	`
+	const { data } = await useAsyncQuery(query)
+	const page = data.value.simplePage
 </script>
 <template>
 	<div>
