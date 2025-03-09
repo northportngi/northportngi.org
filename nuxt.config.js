@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 		defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
 	},
 
-	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxt/fonts', '@nuxtjs/seo', '@nuxtjs/apollo'],
+	modules: ['@nuxt/image', 'nuxt-viewport', '@nuxtjs/seo', '@nuxtjs/apollo'],
 	apollo: {
 		clients: {
 			default: {
