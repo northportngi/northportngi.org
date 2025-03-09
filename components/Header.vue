@@ -8,7 +8,7 @@
 			<div class="grid">
 				<div>
 					<NuxtLink to="/" class="header__logo-link">
-						<img src="/images/nngi-text-logo.svg" alt="Northport Native Garden Initiative" class="header__logo-img" />
+						<img src="/images/nngi-text-logo.svg" alt="Northport Native Garden Initiative" class="header__logo-img" width="200" height="48" />
 					</NuxtLink>
 				</div>
 				<div class="header__navigation">
