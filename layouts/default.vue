@@ -22,9 +22,16 @@
 	.mobile-nav {
 		display: none;
 	}
-	@media (min-width: 1024px) {
+	.mobile-nav.open {
+		display: block; /* or flex, etc. */
+	}
+
+	@media (min-width: 1025px) {
 		.mobile-nav {
-			display: none;
+			display: none !important;
 		}
+	}
+	.mobile-nav {
+		display: none;
 	}
 </style>
