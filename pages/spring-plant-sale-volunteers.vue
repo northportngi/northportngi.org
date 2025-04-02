@@ -6,8 +6,7 @@
 				<div class="container container--1400">
 					<SplitContent gridGap="8rem" gridColumns="4fr 1fr" alignItems="center">
 						<template #leftColumn>
-							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Get Involved</h1>
-							<p class="fs-500">We love the energy of our community and we thrive on volunteers to move forward with our mission.</p>
+							<h1 class="banner__header fs-xl regular clr-yellow mb-2">Spring Plant Sale!</h1>
 						</template>
 						<template #rightColumn> </template>
 					</SplitContent>
