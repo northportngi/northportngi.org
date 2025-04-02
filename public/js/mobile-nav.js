@@ -1,37 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const triggers = document.querySelectorAll('.mobile-link, .hamburger')
-	const mobileNav = document.querySelector('.mobile-nav')
 	const hamburger = document.querySelector('.hamburger')
+	const mobileNav = document.querySelector('.mobile-nav')
 
-	if (!mobileNav) return
+	if (!mobileNav || !hamburger) return
 
 	const toggleMobileNav = () => {
+		const isOpen = mobileNav.classList.contains('open')
+
 		mobileNav.classList.toggle('open')
-		if (hamburger) {
-			hamburger.classList.toggle('is-active')
+		hamburger.classList.toggle('is-active', !isOpen) // Ensure .is-active only changes when menu state changes
+	}
+
+	const closeMobileNav = () => {
+		if (mobileNav.classList.contains('open')) {
+			mobileNav.classList.remove('open')
+			hamburger.classList.remove('is-active')
 		}
 	}
 
 	const handleResize = () => {
 		if (window.innerWidth > 1024) {
-			mobileNav.classList.remove('open')
-			if (hamburger) {
-				hamburger.classList.remove('is-active')
-			}
+			closeMobileNav()
 		}
 	}
 
-	// Click events
-	triggers.forEach((trigger) => {
-		trigger.addEventListener('click', (e) => {
-			e.preventDefault()
-			toggleMobileNav()
+	// Toggle when hamburger clicked
+	hamburger.addEventListener('click', (e) => {
+		e.preventDefault()
+		toggleMobileNav()
+	})
+
+	// Close menu when any nav link is clicked
+	mobileNav.querySelectorAll('a').forEach((link) => {
+		link.addEventListener('click', () => {
+			closeMobileNav()
 		})
 	})
 
-	// Resize event
+	// Auto close on resize
 	window.addEventListener('resize', handleResize)
-
-	// Initial check
-	handleResize()
+	handleResize() // On page load
 })
