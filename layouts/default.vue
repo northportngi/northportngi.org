@@ -1,15 +1,21 @@
 <script setup></script>
 
 <template>
-	<Header class="sticky" />
-	<div class="mobile-nav clr-bg-dark-green">
-		<NavigationMobile />
-	</div>
+	<div>
+		<div class="sticky">
+			<div class="header-wrapper">
+				<Header />
+				<div class="mobile-nav clr-bg-dark-green">
+					<NavigationMobile />
+				</div>
+			</div>
+		</div>
 
-	<div class="clr-bg-white">
-		<NuxtPage />
+		<div class="clr-bg-white">
+			<NuxtPage />
+		</div>
+		<Footer />
 	</div>
-	<Footer />
 </template>
 
 <style lang="scss" scoped>
@@ -19,8 +25,16 @@
 		top: 0;
 		z-index: 1000;
 	}
+	.header-wrapper {
+		position: relative;
+	}
 	.mobile-nav {
 		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
 	}
 	.mobile-nav.open {
 		display: block; /* or flex, etc. */
