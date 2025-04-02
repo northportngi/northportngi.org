@@ -9,6 +9,7 @@
 			"label": "Get Involved",
 			"links": [
 				{ "label": "Stay in Touch", "path": "/stay-in-touch", "slug": "stay-in-touch" },
+				{ "label": "Spring Plant Sale Volunteer", "path": "/spring-plant-sale-volunteers", "slug": "spring-plant-sale-volunteers" },
 				{ "label": "Volunteer", "path": "/volunteer", "slug": "volunteer" },
 				{ "label": "Pollinator Pathway Registration", "path": "https://www.pollinator-pathway.org/register", "slug": "pollinator-pathway-registration", "external": true }
 			]
@@ -38,6 +39,12 @@
 			"label": "Contact",
 			"path": "/contact",
 			"slug": "contact"
+		},
+		{
+			"label": "Shop",
+			"path": "https://shop.northportngi.org",
+			"slug": "shop",
+			"external": true
 		},
 		{
 			"label": "Donate",

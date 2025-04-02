@@ -14,6 +14,9 @@
 				<div class="header__navigation">
 					<Navigation />
 				</div>
+				<div class="header__hamburger">
+					<NavigationHamburger />
+				</div>
 			</div>
 		</div>
 	</header>
@@ -38,6 +41,22 @@
 			display: grid;
 			grid-template-columns: 200px 1fr;
 			align-items: center;
+		}
+		&__hamburger {
+			justify-self: flex-end;
+		}
+		&__navigation {
+			display: none;
+		}
+	}
+	@media (min-width: 1100px) {
+		.header {
+			&__hamburger {
+				display: none;
+			}
+			&__navigation {
+				display: block;
+			}
 		}
 	}
 </style>

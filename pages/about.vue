@@ -51,7 +51,7 @@
 			<div class="container container--1400">
 				<section class="members">
 					<div class="member mblock-8" v-for="bio in page.bios">
-						<SplitContent gridColumns="350px 1fr" alignItems="center" gridGap="6rem">
+						<SplitContent gridColumns="350px 1fr" gridGap="6rem">
 							<template #leftColumn>
 								<nuxt-img :src="bio.photo.url" :alt="bio.photo.altText" sizes="(max-width: 640px) 100vw, 350px" :modifiers="{ width: bio.photo.width }" :width="bio.photo.altText.width" :height="bio.photo.altText.height" class="banner__flyer" />
 							</template>

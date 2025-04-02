@@ -26,6 +26,14 @@ export default defineNuxtConfig({
 					src: '/js/accessible-menu.js',
 					body: true,
 				},
+				{
+					src: '/js/hamburger.js',
+					body: true,
+				},
+				{
+					src: '/js/mobile-nav.js',
+					body: true,
+				},
 			],
 		},
 	},

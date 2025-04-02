@@ -18,6 +18,7 @@
 
 <style lang="scss" scoped>
 	.navigation {
+		font-size: 1.65rem;
 		display: none;
 		font-weight: 400;
 		width: 100%;
@@ -50,7 +51,8 @@
 			}
 			&__primary {
 				display: flex;
-				gap: 2.5rem;
+				flex-wrap: wrap;
+				gap: 1.65rem;
 			}
 			&__link {
 				min-height: 40px;
