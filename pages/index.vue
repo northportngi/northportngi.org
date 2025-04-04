@@ -53,7 +53,9 @@
 						</template>
 
 						<template #rightColumn>
-							<nuxt-img :src="page.banner.image.url" :alt="page.banner.image.altText" width="350" height="452" class="banner__flyer" />
+							<a href="https://shop.northportngi.org" target="_blank">
+								<nuxt-img :src="page.banner.image.url" :alt="page.banner.image.altText" width="350" height="452" class="banner__flyer" />
+							</a>
 						</template>
 					</SplitContent>
 				</div>
@@ -163,7 +165,7 @@
 		}
 		&__flyer {
 			width: 100%;
-			max-width: 350px;
+			max-width: 500px;
 			border: var(--lavender) 1px solid;
 		}
 	}
