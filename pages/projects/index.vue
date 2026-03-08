@@ -50,7 +50,8 @@
 		</div>
 		<div class="container container--1400">
 			<div class="mblock-8">
-				<article>
+				<div v-html="page.copy.html" />
+				<article class="mt-8">
 					<div class="news">
 						<section v-for="article in articles" :key="article.slug">
 							<Card :article="article" />

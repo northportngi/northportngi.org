@@ -24,7 +24,7 @@
 			</svg>
 		</button>
 		<div class="dropdown-menu" :data-dd-path="`dropdown_${index}`">
-			<NuxtLink v-for="link in props.links" :to="link.path" class="dropdown-menu__link">
+			<NuxtLink v-for="link in props.links" :to="link.path" :target="link.external ? '_blank' : ''" class="dropdown-menu__link">
 				<span class="nowrap">{{ link.label }}</span>
 			</NuxtLink>
 		</div>
@@ -59,7 +59,9 @@
 		position: absolute;
 		opacity: 0;
 		visibility: hidden;
-		transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+		transition:
+			opacity 0.2s ease-in-out,
+			visibility 0.2s ease-in-out;
 		top: 95%;
 		left: 0;
 		z-index: 999;

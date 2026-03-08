@@ -2,7 +2,7 @@
 	const config = useRuntimeConfig()
 	const query = gql`
 		query {
-			simplePage(where: { slug: "volunteer" }) {
+			simplePage(where: { slug: "spring-sale-volunteer" }) {
 				title
 				banner {
 					title
@@ -21,7 +21,6 @@
 </script>
 <template>
 	<div>
-		<!-- BANNER -->
 		<div class="banner green-bg-pattern clr-cream">
 			<div class="pblock-8">
 				<div class="container container--1400">
@@ -41,7 +40,7 @@
 					<SplitContent gridGap="8rem" gridColumns="1fr 500px ">
 						<template #leftColumn>
 							<div v-html="page.copy.html" />
-							<WufooForm formid="m7ou7d50ewqn6t" />
+							<WufooForm formid="rwl9k9x0uef2sp" />
 						</template>
 						<template #rightColumn>
 							<img src="/images/nngi-illustration.webp" alt="Illustration of native flowers" />

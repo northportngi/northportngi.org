@@ -10,6 +10,9 @@
 						html
 					}
 				}
+				copy {
+					html
+				}
 				youTubeVideos
 				invasivesCopy {
 					html
@@ -54,7 +57,8 @@
 		</div>
 		<div class="container container--1400">
 			<div class="mblock-8">
-				<div class="videos">
+				<div v-html="page.copy.html" />
+				<div class="videos mt-8">
 					<div class="video" v-for="(video, index) in page.youTubeVideos" :key="index">
 						<div v-html="video" />
 					</div>
