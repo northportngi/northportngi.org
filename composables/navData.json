@@ -2,13 +2,14 @@
 	"primary": [
 		{
 			"label": "About",
-			"path": "/about",
-			"slug": "about"
+			"links": [{ "label": "The Team", "path": "/about", "slug": "about" }],
+			"links": [{ "label": "Mission Statement", "path": "/mission-statement", "slug": "mission-statement" }]
 		},
 		{
 			"label": "Get Involved",
 			"links": [
 				{ "label": "Stay in Touch", "path": "/stay-in-touch", "slug": "stay-in-touch" },
+				{ "label": "Spring Sale Volunteer", "path": "/spring-sale-volunteer", "slug": "/spring-sale-volunteer" },
 				{ "label": "Volunteer", "path": "/volunteer", "slug": "volunteer" },
 				{ "label": "Pollinator Pathway Registration", "path": "https://www.pollinator-pathway.org/register", "slug": "pollinator-pathway-registration", "external": true }
 			]
