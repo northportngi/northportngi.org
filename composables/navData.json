@@ -11,7 +11,7 @@
 			"label": "Get Involved",
 			"links": [
 				{ "label": "Stay in Touch", "path": "/stay-in-touch", "slug": "stay-in-touch" },
-				{ "label": "Spring Sale Volunteer", "path": "/spring-sale-volunteer", "slug": "spring-sale-volunteer" },
+				{ "label": "Spring Plant Sale Volunteers", "path": "/spring-plant-sale-volunteers", "slug": "spring-plant-sale-volunteers" },
 				{ "label": "Volunteer", "path": "/volunteer", "slug": "volunteer" },
 				{ "label": "Pollinator Pathway Registration", "path": "https://www.pollinator-pathway.org/register", "slug": "pollinator-pathway-registration", "external": true }
 			]
