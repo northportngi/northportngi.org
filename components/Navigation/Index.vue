@@ -1,11 +1,16 @@
 <script setup>
 	const navigation = useNavigation()
+
+	const now = new Date()
+	const springSaleDate = new Date('2026-03-25')
+	const showSpringSale = now >= springSaleDate
 </script>
 <template>
 	<nav class="navigation">
 		<ul class="navigation__primary m-0 p-0 no-bull">
 			<template v-for="(item, index) in navigation.primary">
-				<li v-if="item.links" class="navigation__dropdown">
+				<template v-if="item.slug === 'shop' && !showSpringSale" />
+				<li v-else-if="item.links" class="navigation__dropdown">
 					<NavigationDropDown :index="index" :label="item.label" :links="item.links" />
 				</li>
 				<li v-else>
