@@ -3,7 +3,7 @@
 		{
 			"label": "About",
 			"links": [
-				{ "label": "The Team", "path": "/about", "slug": "about" },
+				{ "label": "The Team", "path": "/the-team", "slug": "the-team" },
 				{ "label": "Mission Statement", "path": "/mission-statement", "slug": "mission-statement" }
 			]
 		},
