@@ -7,16 +7,16 @@
 	<nav class="navigation">
 		<ul class="navigation__primary m-0 p-0 no-bull">
 			<li>
-				<NuxtLink class="the-team" to="/about">The Team</NuxtLink>
+				<NuxtLink class="the-team" to="/the-team">The Team</NuxtLink>
 			</li>
 			<li>
-				<NuxtLink class="mission-statement" to="/about">Mission Statement</NuxtLink>
+				<NuxtLink class="mission-statement" to="/mission-statement">Mission Statement</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink class="mobile-link" to="/stay-in-touch">Stay in Touch</NuxtLink>
 			</li>
 			<li>
-				<NuxtLink class="mobile-link" to="/spring-plant-sale-volunteer">Spring Plant Sale Volunteer</NuxtLink>
+				<NuxtLink class="mobile-link" to="/spring-plant-sale-volunteers">Spring Plant Sale Volunteer</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink class="mobile-link" to="/volunteer">Volunteer</NuxtLink>
